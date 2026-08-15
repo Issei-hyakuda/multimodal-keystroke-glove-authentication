@@ -1,0 +1,16 @@
+normalization,modality,W,EER_mean(%),EER_sd(%),n_folds
+level_feature,fused,1,22.596,13.324,9
+level_feature,fused,3,21.133,14.232,9
+level_feature,fused,5,20.338,14.884,9
+level_feature,imu,1,26.722,27.028,9
+level_feature,imu,3,26.069,28.517,9
+level_feature,imu,5,25.459,29.586,9
+level_feature,pressure,1,6.818,6.619,9
+level_feature,pressure,3,4.442,4.551,9
+level_feature,pressure,5,3.158,3.587,9
+scale_only,fused,1,25.489,15.961,9
+scale_only,fused,3,24.933,16.781,9
+scale_only,fused,5,24.579,17.379,9
+scale_only,pressure,1,6.523,5.935,9
+scale_only,pressure,3,4.073,3.883,9
+scale_only,pressure,5,2.69,2.926,9

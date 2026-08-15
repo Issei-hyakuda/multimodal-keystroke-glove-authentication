@@ -1,0 +1,69 @@
+{
+  "params": {
+    "target_len": 35,
+    "hidden_dim": 32,
+    "num_layers": 1,
+    "lr": 0.0003895129585635416,
+    "dropout": 0.12861584747600094,
+    "weight_decay": 1.1858055966574268e-05,
+    "batch_size": 64
+  },
+  "reference_tw": 600,
+  "reference": {
+    "3": 0.559,
+    "5": 0.182
+  },
+  "reference_check": "strict",
+  "norm_mode": "mixed_level",
+  "n_channels": 29,
+  "sweep_windows": [
+    400,
+    450,
+    500,
+    550,
+    600,
+    650,
+    700,
+    800,
+    900,
+    1000
+  ],
+  "seeds_per_fold": 3,
+  "n_folds": 9,
+  "best_params_source": "results/optuna-nested/best_params.json",
+  "source": "Window-Sweep-Rotated.ipynb (retuned)",
+  "not_separable_from_reference": {
+    "1": [
+      500,
+      550,
+      600,
+      650,
+      700,
+      800,
+      900,
+      1000
+    ],
+    "3": [
+      500,
+      600,
+      650,
+      700,
+      800,
+      900,
+      1000
+    ],
+    "5": [
+      500,
+      550,
+      600,
+      650,
+      700,
+      800,
+      900,
+      1000
+    ]
+  },
+  "search_tw_inside_basin": true,
+  "n_runs": 270,
+  "n_skipped": 0
+}

@@ -1,0 +1,5 @@
+arm,EER_W1(%),EER_W3(%),EER_W5(%)
+"single stream, raw",6.525,4.199,2.791
+"single stream, scaled",1.711,0.686,0.26
+"two branches, raw",1.55,0.532,0.179
+"two branches, scaled",1.721,0.626,0.213

@@ -1,0 +1,13 @@
+normalization,modality,W,EER_mean(%),EER_sd(%),n_folds
+mixed_level,fused,1,6.525,6.225,9
+mixed_level,fused,3,4.199,4.189,9
+mixed_level,fused,5,2.791,2.971,9
+mixed_level,imu,1,4.489,3.247,9
+mixed_level,imu,3,2.283,2.307,9
+mixed_level,imu,5,1.138,1.598,9
+mixed_level,pressure,1,6.818,6.619,9
+mixed_level,pressure,3,4.442,4.551,9
+mixed_level,pressure,5,3.158,3.587,9
+mixed_scale,fused,1,6.435,6.375,9
+mixed_scale,fused,3,4.115,4.201,9
+mixed_scale,fused,5,2.904,3.242,9

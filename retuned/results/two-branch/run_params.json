@@ -1,0 +1,20 @@
+{
+  "params": {
+    "target_len": 35,
+    "hidden_dim": 32,
+    "num_layers": 1,
+    "lr": 0.0003895129585635416,
+    "dropout": 0.12861584747600094,
+    "weight_decay": 1.1858055966574268e-05,
+    "batch_size": 64
+  },
+  "window_ms": 600,
+  "target_len": 35,
+  "norm_mode": "mixed_level",
+  "n_channels": 29,
+  "seeds_per_fold": 3,
+  "n_folds": 9,
+  "n_parameters": 101634,
+  "best_params_source": "results/optuna-nested/best_params.json",
+  "source": "Proposed-TwoBranch.ipynb (retuned)"
+}

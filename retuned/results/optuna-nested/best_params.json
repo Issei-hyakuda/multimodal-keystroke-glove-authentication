@@ -1,0 +1,56 @@
+{
+  "params": {
+    "target_len": 35,
+    "hidden_dim": 32,
+    "num_layers": 1,
+    "dropout": 0.12861584747600094,
+    "lr": 0.0003895129585635416,
+    "weight_decay": 1.1858055966574268e-05
+  },
+  "objective": "worst-case (max over the inner folds) EER at W = 1, plus 4.062e-05 x the mean log loss as a tiebreak",
+  "objective_value": 0.0027019005088087925,
+  "objective_components": {
+    "aggregate": "worst",
+    "eer_aggregate": 0.002701517641928497,
+    "log_loss": 0.009426182592876973,
+    "tiebreak_weight": 4.061738424045492e-05,
+    "tiebreak_contribution": 3.8286688029557167e-07
+  },
+  "eer_per_fold": [
+    0.001920128240869792,
+    0.002701517641928497,
+    0.0024951066599103646
+  ],
+  "tune_W": 1,
+  "inner_heldouts": [
+    "P02",
+    "P03",
+    "P04"
+  ],
+  "window_ms_fixed": 600,
+  "n_trials": 200,
+  "n_pruned": 85,
+  "n_complete": 115,
+  "architecture": "TwoBranchFusion (20 pressure + 9 inertial channels)",
+  "search_split": [
+    0.6,
+    0.2,
+    0.2
+  ],
+  "reported_session_withheld": [
+    "202602041210"
+  ],
+  "selection": {
+    "stage": "search",
+    "best_trial": 172,
+    "search_epochs": 12,
+    "search_patience": 4,
+    "search_subsample": 0.5,
+    "search_seed": 42,
+    "seeds_per_fold": 1,
+    "refitted_at_full_budget": false,
+    "note": "ranked at 12 epochs, subsample 0.5, one seed per inner fold, against 100 epochs on all windows for a reported run. No trial was re-fitted at the full budget: see Part E for why, and for what that leaves unresolved."
+  },
+  "independence": "the objective is a chronological tail of the genuine user's desktop recording; the cross-domain session the paper reports on is never opened. The inner impostors also appear as outer folds in Table 1.",
+  "_regenerated": "metadata rewritten from optuna_trials.csv without re-running the search: the previous file labelled the objective \"mean EER at W = 1\", but AGGREGATE = \"worst\" makes it the maximum over the inner folds, and objective_value carries the log-loss tiebreak and is therefore not a bare error rate. params, eer_per_fold and objective_value are unchanged; only their description is corrected."
+}

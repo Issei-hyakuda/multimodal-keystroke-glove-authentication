@@ -1,11 +1,32 @@
 # Multimodal Keystroke + Glove-Kinematics Authentication
 
-Code accompanying the manuscript **"Multimodal User Authentication via Keystroke-Triggered
-Fusion of Finger Pressure and Hand Kinematics"** (IEEE Access, manuscript ID Access-2026-29299).
+[![Paper](https://img.shields.io/badge/IEEE%20Access-2026-00629B)](https://ieeexplore.ieee.org/document/11703552)
+[![DOI](https://img.shields.io/badge/DOI-10.1109%2FACCESS.2026.3736691-blue)](https://doi.org/10.1109/ACCESS.2026.3736691)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+Official code and results for the paper
+
+> **Multimodal User Authentication via Keystroke-Triggered Fusion of Glove-Based Finger Pressure and Hand Kinematics**  
+> Issei Hyakuda and Lei Jing  
+> *IEEE Access*, vol. 14, pp. 163209–163221, 2026 (open access).  
+> DOI: [10.1109/ACCESS.2026.3736691](https://doi.org/10.1109/ACCESS.2026.3736691)
+
+Human Intelligent Sensing Lab, Graduate School of Computer Science and Engineering,
+The University of Aizu, Japan.
 
 The raw recordings are not published, but every run's per-fold output and the per-keystroke
 scores behind the headline result are, so the tables and the statistical tests in the paper
 can be checked from `results/` alone — no GPU, no raw data.
+
+## Overview
+
+Keystroke-timing features are cheap but fragile under changes of keyboard and environment.
+This work replaces them with 19 channels of finger pressure and hand motion, recorded around
+each key press by a custom data glove (ten piezoresistive pressure sensors on the fingers and
+a nine-axis IMU on the back of the hand). Ten participants took part, one enrolled as the
+genuine user. The model is trained on a desktop keyboard and evaluated on a laptop keyboard
+recorded on a later day, against an impostor never seen in training; each of the nine
+impostors takes that role in turn (Leave-One-Impostor-Out).
 
 ## The method in one paragraph
 
@@ -138,7 +159,7 @@ result:
 Halving the depth and the width and cutting the parameter count by 56% changes nothing that
 nine folds can detect. The paper keeps the original configuration, because it is the one every
 other experiment in `results/` was run under, and reports this search as the check that the
-configuration is not an artefact of how it was chosen. Nothing in the manuscript's tables depends on
+configuration is not an artefact of how it was chosen. Nothing in the paper's tables depends on
 `retuned/`.
 
 ## Data availability
@@ -170,5 +191,22 @@ Reproducing the tables from `results/` needs none of PyTorch, Optuna or a GPU
 
 ## Citation
 
-If you use this code, please cite the associated manuscript (citation details to be added once
-the final publication information is available).
+If you use this code or the results in this repository, please cite:
+
+```bibtex
+@article{hyakuda2026multimodal,
+  author  = {Hyakuda, Issei and Jing, Lei},
+  title   = {Multimodal User Authentication via Keystroke-Triggered Fusion of
+             Glove-Based Finger Pressure and Hand Kinematics},
+  journal = {IEEE Access},
+  volume  = {14},
+  pages   = {163209--163221},
+  year    = {2026},
+  doi     = {10.1109/ACCESS.2026.3736691}
+}
+```
+
+## License
+
+The code is released under the [MIT License](LICENSE). The paper itself is published open
+access in *IEEE Access*; see the publisher's page for its license.

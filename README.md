@@ -22,8 +22,8 @@ can be checked from `results/` alone — no GPU, no raw data.
 
 Keystroke-timing features are cheap but fragile under changes of keyboard and environment.
 This work replaces them with 19 channels of finger pressure and hand motion, recorded around
-each key press by a custom data glove (ten piezoresistive pressure sensors on the fingers and
-a nine-axis IMU on the back of the hand). Ten participants took part, one enrolled as the
+each key press by a custom data glove (ten piezoresistive pressure sensors at the fingertips and
+finger joints, and a nine-axis IMU in the controller on the palmar side of the wrist). Ten participants took part, one enrolled as the
 genuine user. The model is trained on a desktop keyboard and evaluated on a laptop keyboard
 recorded on a later day, against an impostor never seen in training; each of the nine
 impostors takes that role in turn (Leave-One-Impostor-Out).
